@@ -1,0 +1,20 @@
+{
+  "name": "G News",
+  "short_name": "News",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#121212",
+  "description": "Google News App.",
+  "icons": [
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

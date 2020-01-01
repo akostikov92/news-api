@@ -31,9 +31,15 @@ header > img {
 
 h1 {
   padding: 1.5rem;
-  color: rgb(0, 102, 255);
-  font-weight: 300;
+  background: linear-gradient(15deg, rgb(255 0 255), rgb(0 50 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
   font-size: 1.2rem;
+}
+h1 > span {
+  color: rgb(255, 0, 255);
 }
 
 main {
@@ -45,10 +51,24 @@ main {
 }
 
 a {
-  color: rgb(84, 171, 201);
+  color: rgb(255, 153, 255);
   text-decoration: none;
 }
 
+hr {
+  border: 1px solid rgb(63, 66, 231);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+header img {
+  width: 36px;
+}
+
+/*
 news-article {
   flex: 0;
   font-family: 'Roboto', sans-serif;
@@ -91,3 +111,4 @@ p {
   margin: 0px auto;
   display: flex;
 }
+*/

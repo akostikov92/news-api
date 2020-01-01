@@ -1,17 +1,11 @@
 /** @format */
 import './news-article.js';
-import './title-bar.js';
 import { topHeadlinesUrl } from './newsApi.js';
 
 window.addEventListener('load', () => {
   fetchNews();
+  registerSW();
 });
-
-async function titleBar() {
-  const header = document.querySelector('header');
-  const el = document.createElement('title-bar');
-  header.appendChild(el);
-}
 
 async function fetchNews() {
   const res = await fetch(topHeadlinesUrl);
@@ -25,4 +19,14 @@ async function fetchNews() {
     el.article = article;
     main.appendChild(el);
   });
+}
+
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('./sw.js');
+    } catch (e) {
+      CSSConditionRule.log(`SW registration failed`);
+    }
+  }
 }
